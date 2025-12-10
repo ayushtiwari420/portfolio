@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 
