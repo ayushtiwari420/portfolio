@@ -1,16 +1,39 @@
-# React + Vite
+# Professional Portfolio | Ayush Tiwari
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance portfolio website built with **React** and **Tailwind CSS v4**. This project features a sophisticated theme-switching architecture, responsive design, and optimized asset delivery.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Dynamic Theme Switching**: A premium Dark/Light mode implementation using **React Context API** for global state management.
+* **Tailwind CSS v4 Integration**: Leverages the latest CSS-first configuration and `@variant` directives for manual theme toggling.
+* **Responsive UI**: Optimized for all devices using a "Soft Slate" color palette to reduce eye strain in light mode.
+* **Optimized Asset Delivery**: Static assets (Resume/Posters) served via the **Vite public directory** for seamless external tab opening.
+* **Interactive Motion**: Fluid transitions and hover effects powered by **Framer Motion**.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+| Technology | Purpose |
+| :--- | :--- |
+| **React (Vite)** | Frontend Framework & Build Tool |
+| **Tailwind CSS v4** | Modern CSS Styling & Dark Mode |
+| **Context API** | Theme State Management |
+| **Framer Motion** | UI Animations & Smooth Transitions |
+| **EmailJS** | Client-side Contact Form Integration |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Project Structure
+
+```text
+├── public/               # Static assets (PDFs, Images)
+│   ├── pdf/              # Project posters and Resume
+│   └── img/              # Profile and project thumbnails
+├── src/
+│   ├── components/       # Reusable UI components (ThemeBtn, Page)
+│   ├── contexts/         # ThemeContext and custom hooks
+│   ├── App.jsx           # Root component with ThemeProvider
+│   └── index.css         # Global styles & Tailwind v4 directives
+├── tailwind.config.js    # Tailwind configuration
+└── vite.config.js        # Vite & Tailwind plugin configuration
