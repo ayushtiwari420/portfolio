@@ -179,23 +179,27 @@ function AboutCard({ title, items }) {
 }
 
 function ProjectCard({ title, desc, link }) {
-  const handleViewProject = () => {
-    if (link) {
-      window.open(link, "_blank", "noopener,noreferrer");
-    }
-  };
-
   return (
-    <div className="p-8 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 shadow-md hover:shadow-xl transition-all duration-300">
+    <motion.div 
+      whileHover={{ 
+        y: -10, 
+        scale: 1.02,
+        transition: { duration: 0.2, ease: "easeInOut" } 
+      }}
+      className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer transform-gpu"
+    >
       <h3 className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">{title}</h3>
       <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">{desc}</p>
       
       <button 
-        onClick={handleViewProject}
+        onClick={(e) => {
+          e.stopPropagation(); 
+          window.open(link, "_blank", "noopener,noreferrer");
+        }}
         className="px-5 py-2.5 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors"
       >
         View Project
       </button>
-    </div>
+    </motion.div>
   );
 }
