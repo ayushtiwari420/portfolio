@@ -1,7 +1,10 @@
 @import "tailwindcss";
-
-html {
-  scroll-behavior: smooth;
+@variant hover (&:hover);
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
 }
-
-@variant dark (&:where(.dark, .dark *));
+.project-card-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
