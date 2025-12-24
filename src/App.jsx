@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ThemeProvider } from './contexts/theme'
-import Page from './components/page'
+import Page from './components/Page'
 
 function App() {
   const [themeMode, setThemeMode] = useState("dark")
